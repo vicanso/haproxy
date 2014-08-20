@@ -4,7 +4,7 @@
 
   start = function() {
     var JTStatsClient, config, jtHalog;
-    jtHalog = require('./index');
+    jtHalog = require('jthalog');
     config = require('./config');
     JTStatsClient = require('jtstats_client');
     return jtHalog.start({
@@ -30,6 +30,10 @@
 
   jtCluster.on('log', function(msg) {
     return console.dir(msg);
+  });
+
+  jtCluster.on('error', function(err) {
+    return console.error(err);
   });
 
 }).call(this);

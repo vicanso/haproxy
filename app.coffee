@@ -1,6 +1,6 @@
 
 start = ->
-  jtHalog = require './index'
+  jtHalog = require 'jthalog'
   config = require './config'
   JTStatsClient = require 'jtstats_client'
   jtHalog.start {
@@ -21,3 +21,5 @@ options =
 jtCluster = new JTCluster options
 jtCluster.on 'log', (msg) ->
   console.dir msg
+jtCluster.on 'error', (err) ->
+  console.error err

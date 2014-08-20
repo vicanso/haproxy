@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "main": "app",
   "dependencies": {
+    "commander": "^2.3.0",
     "jtcluster": "0.0.3",
     "jthalog": "^0.1.2",
     "jtstats_client": "0.0.6"
